@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url(style.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Poppins, Geneva, Verdana, sans-serif;
+}
+
+.full-page
+{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("F:/one-drive/Desktop/MIniproject/Miniproject/sunset.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.graph{
+    transform: translate(50%,10%);
+    top: 500px;
+}
+canvas{
+    top: 30%;
+    left: 17%;
+    position: absolute;
+    background-color: #bbb;
+    opacity: 0.7;
+    padding: 20px 20px;
+    max-height: 1050px;
+    max-width: 1000px;
+}
+canvas:hover{
+    animation-delay: 500ms;
+    opacity: 1;
+}
+
+nav
+{
+    flex: 1;
+    text-align: right;
+    margin-top: 15px;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    text-align: right;
+}
+nav ul li button
+{
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color: #E04D01;
+}
+nav ul li a:hover
+{
+    color: #E04D01;
+}
+#animateHelpText{
+	color: white;
+}

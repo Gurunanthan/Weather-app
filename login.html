@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather forecasting</title>
+	 <link rel="stylesheet" href="lstyle.css"/>
+</head>
+<body>
+<div class="full-page">
+	<div class="navbar">
+            <div class="nav-wrapper">
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='index.html' class="hover-this">Home</a></li>
+                    <li><a href='map1.html' class="hover-this">Graph view</a></li>
+                    <li><a href='contact.html' class="hover-this">Contact</a></li>
+                    <li><a href='#' class="hover-this">Login</a></li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+		
+		<div class="signup">
+			
+			<form >
+				<label for="chk" aria-hidden="true">Sign up</label>
+				<input type="text" name="txt" placeholder="User name" required="" id="user">
+				<input type="email" name="email" placeholder="Email" required="" id="email">
+				<input type="password" name="pswd" placeholder="Password" required="" id="pass">
+				<button onclick="Signup()">Sign up</button>
+			</form>
+				
+			</div>
+		
+		<div class="login">
+				
+				
+				<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="" id="login-user">
+					<input type="password" name="pswd" placeholder="Password" required="" id="login-pass">
+					<button onclick="login()">Login</button>
+					
+				
+			</div>
+	</div>
+</div>
+</body>
+<script>
+	function Signup()
+	{
+		 var user=document.getElementById('user').value;
+		 var email=document.getElementById('email').value;
+		 var pass=document.getElementById('pass').value;
+		 localStorage.setItem("name",user);
+		 localStorage.setItem("email",email);
+		 localStorage.setItem('pass',pass);
+	}
+	function login(){
+		var loginuser=document.getElementById('login-user').value;
+		var loginpass=document.getElementById('login-pass').value;
+		var checkuser=localStorage.getItem('email');
+		var checkpass=localStorage.getItem('pass');
+		if(loginuser==checkuser && loginpass==checkpass)
+		{
+			window.location.href='index.html';
+		}
+		else{
+			alert('check the username and password');
+		}
+	}
+</script>
+</html>

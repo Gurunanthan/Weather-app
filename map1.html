@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Mstyle.css">
+<title>Weather forecasting</title>
+<body>
+  <div class="full-page">
+    <div id="headerTitle">Weather Forecast </div><br>
+<div class="navbar">
+            <div class="nav-wrapper">
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='index.html' class="hover-this">Home</a></li>
+                    <li><a href='#' class="hover-this">Graph view</a></li>
+                    <li><a href='contact.html' class="hover-this">Contact</a></li>
+                    <li><a href='login.html' class="hover-this" id="login">Login</a></li>
+                </ul>
+              </nav>
+        </div>
+        
+<canvas id="myChart"></canvas>
+<script>
+var xValues = ["Thur", "Fri", "Sat", "Sun", "Mon","tues","wed"];
+var yValues = [39, 37, 37.5, 40, 37,40,33.75];
+var barColors = ["red", "green","blue","orange","brown","yellow","violet"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+    }
+  }
+});
+</script>
+<script>document.getElementById('login').innerText=localStorage.getItem('name')</script>
+</div>
+</body>
+</html>
